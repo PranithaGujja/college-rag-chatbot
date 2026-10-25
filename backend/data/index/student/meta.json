@@ -1,0 +1,7 @@
+{
+ "role": "student",
+ "handbook": "Student Handbook",
+ "n_chunks": 283,
+ "embed_model": "BAAI/bge-small-en-v1.5",
+ "dim": 384
+}

@@ -1,0 +1,22 @@
+# secrets
+.env
+.env.local
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.db
+.fastembed_cache/
+# node
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+# OS / editor
+.DS_Store
+.vscode/
+# real student/faculty data and generated passwords: never commit
+backend/users*.csv
+backend/credentials_*.csv

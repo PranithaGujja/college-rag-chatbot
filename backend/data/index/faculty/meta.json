@@ -1,0 +1,7 @@
+{
+ "role": "faculty",
+ "handbook": "Faculty Handbook",
+ "n_chunks": 232,
+ "embed_model": "BAAI/bge-small-en-v1.5",
+ "dim": 384
+}

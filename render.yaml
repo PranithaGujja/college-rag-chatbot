@@ -1,0 +1,35 @@
+# Render Blueprint. Render dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: college-handbook-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt && python -m app.rag.embeddings --warmup
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips='*'
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FASTEMBED_CACHE_PATH
+        value: /opt/render/project/src/backend/.fastembed_cache
+      - key: CORS_ORIGINS          # your Vercel URL, e.g. https://college-portal.vercel.app
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_REASONING_EFFORT
+        value: low
+      - key: EXTRA_USERS            # id|name|role|password ; id|name|role|password  (re-created at every start)
+        sync: false
+      - key: STUDENT_SIGNUP_CODE
+        sync: false
+      - key: FACULTY_SIGNUP_CODE
+        sync: false
+      - key: DEMO_STUDENT_PASSWORD
+        sync: false
+      - key: DEMO_FACULTY_PASSWORD
+        sync: false
