@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # College Handbook Portal (RAG chatbot)
 
 Students log in and chat with the **Student Handbook**. Faculty log in and chat with the **Faculty Handbook**.
@@ -104,3 +105,6 @@ frontend/components/         Chat, SourceList, MessageText, Brand
 frontend/lib/                api client, theme, brand (edit brand.ts to rebrand)
 ```
 Note: the "Faculty Handbook" PDF is titled *Staff Handbook* and covers teaching and non-teaching staff; the assistant labels rules by group.
+=======
+# Personal
+>>>>>>> ee99a6c2fa8fd4a02e5bb5217e68b409a55d26c3
